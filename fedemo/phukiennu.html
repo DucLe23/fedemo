@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Phụ kiện bằng da cho nữ</title>
+    <link rel="stylesheet" href="fe.css">
+</head>
+<body>
+    <section class="products">
+
+        <div class="product-grid">
+            <div class="product-item" onclick="openDetailPage('Ví Đựng Hộ Chiếu', '₫13,100,000', 'images/passport.png')">
+                <img src="images/passport.png" alt="Ví Đựng Hộ Chiếu" />
+                <p>Ví Đựng Hộ Chiếu</p>
+                <p class="price">₫13,100,000</p>
+
+            </div>
+
+            <div class="product-item" onclick="openDetailPage('Ví Đựng Thẻ', '₫19,000,000', 'images/passport1.png', '23.5 x 16 x 8.5 cm(Chiều dài x Chiều cao x Chiều rộng)Dây đeo: Có thể tháo rời và điều chỉnh độ dàiChiều dài dây đeo: 45.0 cmChiều dài dây đeo tối đa: 55.0 cmTay cầm: Có thể tháo rời đơn giản')">
+                <img src="images/passport1.png" alt="Ví Đựng Thẻ" />
+                <p>Ví Đựng Thẻ</p>
+                <p class="price">₫19,000,000</p>
+            </div>
+
+            <div class="product-item" onclick="openDetailPage('Ví Key Pouch S', '₫65,000,000', 'images/passport2.png')">
+                <img src="images/passport2.png" alt="Ví Key Pouch S" />
+                <p>Ví Key Pouch S</p>
+                <p class="price">₫65,000,000</p>
+            </div>
+
+            <div class="product-item" onclick="openDetailPage('Pocket Organizer', '₫72,000,000', 'images/passport3.png')">
+                <img src="images/passport3.png" alt="Pocket Organizer" />
+                <p>Pocket Organizer</p>
+                <p class="price">₫72,000,000</p>
+            </div>
+            <div class="product-item" onclick="openDetailPage('Túi Noé-Where Vivienne', '₫97,000,000', 'images/pp4.png')">
+                <img src="images/pp4.png" alt="Túi Noé-Where Vivienne" />
+                <p>Túi Noé-Where Vivienne</p>
+                <p class="price">₫97,000,000</p>
+            </div>
+
+            <div class="product-item" onclick="openDetailPage('Ví Key Pouch S Prenium', '₫40,000,000', 'images/pp5.png')">
+                <img src="images/pp5.png" alt="Ví Key Pouch S Prenium" />
+                <p>Ví Key Pouch S Prenium</p>
+                <p class="price">₫40,000,000</p>
+            </div>
+
+            <div class="product-item" onclick="openDetailPage('Ví Victorine', '₫56,000,000', 'images/pp6.png')">
+                <img src="images/pp6.png" alt="Ví Victorine" />
+                <p>Ví Victorine</p>
+                <p class="price">₫56,000,000</p>
+            </div>
+
+            <div class="product-item" onclick="openDetailPage('Ví Đựng Thẻ LV Charms', '₫42,000,000', 'images/pp7.png')">
+                <img src="images/pp7.png" alt="Ví Đựng Thẻ LV Charms" />
+                <p>Ví Đựng Thẻ LV Charms</p>
+                <p class="price">₫42,000,000</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        function openDetailPage(name, price, image, desc) {
+            localStorage.setItem("productName", name);
+            localStorage.setItem("productPrice", price);
+            localStorage.setItem("productImage", image);
+            localStorage.setItem("productDesc", desc);
+
+            window.location.href = "detail.html";
+        }
+
+        // ✅ Lưu sản phẩm vào localStorage
+        localStorage.setItem("selectedProduct", JSON.stringify(product));
+    </script>
+</body>
+</html>

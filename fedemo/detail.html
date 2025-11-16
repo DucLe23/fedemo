@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm - Louis Vuitton</title>
+    <link rel="stylesheet" href="fe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header đơn giản -->
+    <header class="navbar">
+        <div class="nav-left">
+            <a href="tui-xach-nu.html" class="back-home"><i class="fa fa-chevron-left"></i> Trang chủ</a>
+        </div>
+        <div class="nav-center">
+            <h1>LOUIS VUITTON</h1>
+        </div>
+        <div class="nav-right">
+            <i class="fa fa-user"></i>
+        </div>
+    </header>
+
+    <!-- Nội dung chi tiết -->
+    <section class="product-detail">
+        <div class="product-image">
+            <img id="productImg" src="images/tuinu.jpg" alt="Sản phẩm">
+        </div>
+
+            <button class="buy-now-btn" onclick="redirectToCheckout()">Mua ngay</button>
+    </section>
+
+    <script>
+        // Nếu có dữ liệu được truyền từ trang sản phẩm thì hiển thị
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name');
+        const price = params.get('price');
+        const img = params.get('img');
+        const desc = params.get('desc');
+
+        if (name && price && img) {
+            document.getElementById('productName').innerText = name;
+            document.getElementById('productPrice').innerText = price;
+            document.getElementById('productImg').src = img;
+            document.getElementById('productDesc').innerText = desc || "Sản phẩm cao cấp của Louis Vuitton.";
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            const productData = localStorage.getItem("selectedProduct");
+
+            if (!productData) {
+                document.body.innerHTML = "<h2>Không có sản phẩm nào được chọn!</h2>";
+                return;
+            }
+
+            const product = JSON.parse(productData);
+
+            // Gán vào các phần tử HTML
+            document.getElementById("detail-img").src = product.image;
+            document.getElementById("detail-name").textContent = product.name;
+            document.getElementById("detail-price").textContent = product.price;
+            document.getElementById("detail-desc").textContent = product.desc;
+        });
+
+        function redirectToCheckout() {
+            // Lưu thông tin để sang trang thanh toán
+            const product = {
+                name: document.getElementById('productName').innerText,
+                price: document.getElementById('productPrice').innerText,
+                img: document.getElementById('productImg').src
+            };
+            localStorage.setItem("selectedProduct", JSON.stringify(product));
+            window.location.href = "thanhtoan.html";
+        }
+    </script>
+</body>
+</html>

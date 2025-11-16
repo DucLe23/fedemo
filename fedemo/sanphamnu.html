@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm Louis Vuitton</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            color: black;
+            padding: 15px 60px;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-left i {
+            margin-right: 8px;
+            font-size: 20px;
+        }
+
+        .header-left span {
+            font-size: 14px;
+        }
+
+        .header-center h1 {
+            font-size: 20px;
+            letter-spacing: 2px;
+            font-weight: 500;
+        }
+
+        .header-right a {
+            margin-right: 15px;
+            font-size: 14px;
+            color: black;
+            text-decoration: none;
+        }
+
+        .header-right i {
+            margin-left: 15px;
+            font-size: 18px;
+            color: black;
+        }
+
+        .products {
+            padding: 60px 80px;
+            text-align: center;
+        }
+
+            .products h2 {
+                font-size: 26px;
+                margin-bottom: 40px;
+            }
+
+        .product-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .product-item img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+            .product-item img:hover {
+                transform: scale(1.05);
+            }
+
+        .product-item p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: black;
+            color: white;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+            .back-btn:hover {
+                background: #555;
+            }
+    </style>
+</head>
+<body class="product-page">
+    <header class="header">
+        <div class="header-left">
+            <i class="fa-solid fa-bars"></i>
+            <span>Menu</span>
+        </div>
+
+        <div class="header-center">
+            <h1>LOUIS VUITTON</h1>
+        </div>
+
+        <div class="header-right">
+            <a href="#">Liên hệ với chúng tôi</a>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-user"></i>
+        </div>
+    </header>
+
+    <section class="products">
+        <h2>Sản phẩm nổi bật</h2>
+        <div class="product-row">
+            <div class="product-item">
+                <img src="images/image10.png" alt="Áo khoác" />
+                <p>Monogram Reversible Windbreaker</p>
+                <p class="price">₫87,000,000</p>
+            </div>
+            <div class="product-item">
+                <img src="images/image11.png" alt="Monogram Silk Shorts">
+                <p>Monogram Silk Shorts</p>
+                <p class="price">₫42,000,000</p>
+            </div>
+            <div class="product-item">
+                <img src="images/image12.png" alt="Mini Shopper Tote">
+                <p>Mini Shopper Tote</p>
+                <p class="price">₫108,000,000</p>
+            </div>
+            <div class="product-item">
+                <img src="images/image13.png" alt="Sawagani Trunk">
+                <p>Sawagani Trunk</p>
+                <p class="price">₫375,000,000</p>
+            </div>
+            <div class="product-item">
+                <img src="images/image14.png" alt="Fox Bag" />
+                <p>Fox Bag</p>
+                <p class="price">₫106,000,000</p>
+            </div>
+            <div class="product-item">
+                <img src="images/image15.png" alt="LV Crush Monogram Surplus Beanie">
+                <p>LV Crush Monogram Surplus Beanie</p>
+                <p class="price">₫16,500,000</p>
+            </div>
+            <div class="product-item">
+                <img src="images/image16.png" alt="Velvet Denim Pants With Monogram Details">
+                <p>Velvet Denim Pants With Monogram Details</p>
+                <p class="price">₫55,000,000</p>
+            </div>
+            <div class="product-item">
+                <img src="images/image17.png" alt="Flocked Denim Jacket With Monogram Details">
+                <p>Flocked Denim Jacket With Monogram Detailsk</p>
+                <p class="price">₫93,500,000</p>
+            </div>
+        </div>
+
+        <a href="fe.html" class="back-btn">← Quay lại trang chủ</a>
+    </section>
+    <script>
+  window.addEventListener("scroll", function() {
+    const header = document.querySelector(".main-header");
+    header.classList.toggle("scrolled", window.scrollY > 50);
+  });
+    </script>
+</body>
+</html>

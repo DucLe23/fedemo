@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Louis Vuitton in Vietnam</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="fe.css">
+</head>
+<body>
+
+    <header id="navbar" class="navbar">
+        <div class="nav-left">
+            <i class="fa fa-bars"></i>
+            <span>Menu</span>
+            <div class="search-box">
+                <i class="fa fa-search"></i>
+                <input type="text" placeholder="Tìm kiếm...">
+            </div>
+        </div>
+
+        <div class="nav-center">
+            <h1>LOUIS VUITTON</h1>
+        </div>
+
+        <div class="nav-right">
+            <li><a href="#" id="openContact">Liên hệ với chúng tôi</a></li>
+
+            <!-- Panel Liên hệ -->
+            <div id="contactPanel" class="contact-panel">
+                <div class="contact-content">
+                    <button id="closeContact" class="close-btn">&times;</button>
+                    <h2>Liên hệ với chúng tôi</h2>
+                    <p>Trung tâm Tư vấn Khách hàng của Louis Vuitton rất hân hạnh được hỗ trợ quý khách.</p>
+
+                    <ul>
+                        <li>📞 +84 99999999999</li>
+                        <li>📧 Gửi email</li>
+                        <li>💬 WhatsApp</li>
+                        <li>💭 Zalo</li>
+                        <li>📱 Apple Message</li>
+                        <li>💬 Facebook Messenger</li>
+                    </ul>
+
+                    <h3>Chúng tôi có thể giúp gì được cho quý khách?</h3>
+                    <p>
+                        <a href="#">CÂU HỎI THƯỜNG GẶP</a><br>
+                        <a href="#">DỊCH VỤ CHĂM SÓC</a>
+                    </p>
+                </div>
+            </div>
+            <i class="fa fa-heart"></i>
+            <i class="fa fa-user"></i>
+        </div>
+    </header>
+
+    <div id="loginPanel" class="login-panel">
+        <div class="login-content">
+            <button id="closeLogin" class="close-btn">&times;</button>
+
+            <!-- FORM ĐĂNG NHẬP -->
+            <div id="loginForm">
+                <h2>Đăng nhập tài khoản</h2>
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" placeholder="Nhập email của bạn" required>
+
+                <label for="loginPassword">Mật khẩu</label>
+                <input type="password" id="loginPassword" placeholder="Nhập mật khẩu" required>
+
+                <button type="button" class="login-btn" onclick="submitLogin()">Đăng nhập</button>
+
+                <p class="switch-text">
+                    Chưa có tài khoản? <a href="#" id="showSignup">Tạo tài khoản mới</a>
+                </p>
+            </div>
+
+            <!-- FORM ĐĂNG KÝ -->
+            <div id="signupForm" style="display: none;">
+                <h2>Tạo tài khoản mới</h2>
+
+                <label for="signupName">Họ và tên</label>
+                <input type="text" id="signupName" placeholder="Nhập họ tên của bạn" required>
+
+                <label for="signupEmail">Email</label>
+                <input type="email" id="signupEmail" placeholder="Nhập email của bạn" required>
+
+                <label for="signupPassword">Mật khẩu</label>
+                <input type="password" id="signupPassword" placeholder="Tạo mật khẩu" required>
+
+                <button type="button" class="login-btn" onclick="submitSignup()">Đăng ký</button>
+
+                <p class="switch-text">
+                    Đã có tài khoản? <a href="#" id="showLogin">Đăng nhập</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section class="banner">
+        <img src="images/background.jpg" alt="Louis Vuitton" />
+        <div class="banner-text">
+            <p class="small-text">MỪNG NGÀY PHỤ NỮ VIỆT NAM</p>
+            <h2>Gợi ý quà tặng cho ngày 20/10</h2>
+            <a href="sanphamnu.html" class="btn">Khám phá thêm</a>
+        </div>
+    </section>
+
+    <section class="products">
+        <h2>Khám phá các sáng tạo độc đáo của Louis Vuitton</h2>
+
+        <div class="product-grid">
+            <div class="product-item">
+                <a href="tui-xach-nu.html">
+                    <img src="images/tuinu.jpg" alt="Túi xách nữ" />
+                    <p>Túi xách nữ</p>
+                </a>
+            </div>
+
+            <div class="product-item">
+                <a href="phukiennu.html">
+                    <img src="images/phukienda.jpg" alt="Phụ kiện bằng da cho nữ" />
+                    <p>Phụ kiện bằng da cho nữ</p>
+                </a>
+            </div>
+
+            <div class="product-item">
+                <img src="images/blink.jpg" alt="Phụ kiện thời trang cho nữ" />
+                <p>Phụ kiện thời trang cho nữ</p>
+            </div>
+
+            <div class="product-item">
+                <img src="images/lamdep.jpg" alt="Làm đẹp" />
+                <p>Làm đẹp</p>
+            </div>
+            <div class="product-item">
+                <img src="images/tuinam.jpg" alt="Túi xách nam" />
+                <p>Túi xách nam</p>
+            </div>
+
+            <div class="product-item">
+                <img src="images/vinam.jpg" alt="Phụ kiện bằng da cho nam" />
+                <p>Phụ kiện bằng da cho nam</p>
+            </div>
+
+            <div class="product-item">
+                <img src="images/giaynam.jpg" alt="Giày nam" />
+                <p>Giày nam</p>
+            </div>
+
+            <div class="product-item">
+                <img src="images/nuochoa.jpg" alt="Nước hoa" />
+                <p>Nước hoa</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="fe.js"></script>
+    <script>
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector(".main-header");
+            header.classList.toggle("scrolled", window.scrollY > 50);
+        });
+  const userIcon = document.querySelector('.fa-user');
+        const loginPanel = document.getElementById('loginPanel');
+        const closeLogin = document.getElementById('closeLogin');
+        const loginForm = document.getElementById('loginForm');
+        const signupForm = document.getElementById('signupForm');
+        const showSignup = document.getElementById('showSignup');
+        const showLogin = document.getElementById('showLogin');
+        const navRight = document.querySelector('.nav-right');
+
+        // Mở popup khi nhấn vào icon người dùng
+        userIcon.addEventListener('click', () => {
+            const currentUser = localStorage.getItem('currentUser');
+            if (currentUser) {
+                alert(`Bạn đã đăng nhập với tài khoản: ${currentUser}`);
+            } else {
+                loginPanel.style.display = 'flex';
+                loginForm.style.display = 'block';
+                signupForm.style.display = 'none';
+            }
+        });
+
+        // Đóng popup
+        closeLogin.addEventListener('click', () => {
+            loginPanel.style.display = 'none';
+        });
+
+        // Ẩn popup khi click ra ngoài
+        window.addEventListener('click', (e) => {
+            if (e.target === loginPanel) {
+                loginPanel.style.display = 'none';
+            }
+        });
+
+        // Chuyển sang form đăng ký
+        showSignup.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginForm.style.display = 'none';
+            signupForm.style.display = 'block';
+        });
+
+        // Chuyển lại form đăng nhập
+        showLogin.addEventListener('click', (e) => {
+            e.preventDefault();
+            signupForm.style.display = 'none';
+            loginForm.style.display = 'block';
+        });
+
+        // ===== ĐĂNG KÝ =====
+        function submitSignup() {
+            const name = document.getElementById('signupName').value.trim();
+            const email = document.getElementById('signupEmail').value.trim();
+            const pass = document.getElementById('signupPassword').value.trim();
+
+            if (!name || !email || !pass) {
+                alert("Vui lòng điền đủ thông tin!");
+                return;
+            }
+
+            // Lấy danh sách người dùng từ localStorage
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+
+            // Kiểm tra email đã tồn tại chưa
+            const existingUser = users.find(u => u.email === email);
+            if (existingUser) {
+                alert("Email này đã được đăng ký!");
+                return;
+            }
+
+            // Thêm người dùng mới
+            users.push({ name, email, pass });
+            localStorage.setItem('users', JSON.stringify(users));
+
+            alert("Tạo tài khoản thành công! Bạn có thể đăng nhập ngay.");
+            signupForm.style.display = 'none';
+            loginForm.style.display = 'block';
+        }
+
+        // ===== ĐĂNG NHẬP =====
+        function submitLogin() {
+            const email = document.getElementById('loginEmail').value.trim();
+            const pass = document.getElementById('loginPassword').value.trim();
+
+            if (!email || !pass) {
+                alert("Vui lòng nhập đầy đủ thông tin!");
+                return;
+            }
+
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const user = users.find(u => u.email === email && u.pass === pass);
+
+            if (!user) {
+                alert("Tài khoản không tồn tại hoặc sai mật khẩu!");
+                return;
+            }
+
+            // Lưu người đang đăng nhập
+            localStorage.setItem('currentUser', user.name);
+
+            // Hiển thị trên thanh menu
+            showLoggedInUser(user.name);
+            loginPanel.style.display = 'none';
+        }
+
+        // ===== HIỂN THỊ NGƯỜI DÙNG ĐANG ĐĂNG NHẬP =====
+        function showLoggedInUser(name) {
+            navRight.innerHTML = `
+      <span class="user-name">Xin chào, ${name}</span>
+      <button id="logoutBtn" class="logout-btn">Đăng xuất</button>
+    `;
+
+            document.getElementById('logoutBtn').addEventListener('click', () => {
+                localStorage.removeItem('currentUser');
+                alert("Đã đăng xuất!");
+                location.reload();
+            });
+        }
+
+        // Nếu đã đăng nhập thì hiển thị tên luôn khi tải trang
+        window.addEventListener('DOMContentLoaded', () => {
+            const currentUser = localStorage.getItem('currentUser');
+            if (currentUser) showLoggedInUser(currentUser);
+        });
+    </script>
+</body>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h4>HỖ TRỢ</h4>
+            <p>
+                Quý khách có thể liên hệ với chúng tôi qua<br>
+                Hotline +84 2838614107,
+                <a href="#">Zalo</a>,
+                <a href="#">Email</a>,
+                hoặc <a href="#">các phương thức liên hệ khác</a>.
+            </p>
+            <p><a href="#">Câu hỏi thường gặp</a></p>
+            <p><a href="#">Chăm sóc sản phẩm</a></p>
+            <p><a href="#">Cửa hàng</a></p>
+        </div>
+
+        <div class="footer-column">
+            <h4>DỊCH VỤ</h4>
+            <p><a href="#">Dịch vụ bảo hành</a></p>
+            <p><a href="#">Dịch vụ cá nhân hóa</a></p>
+            <p><a href="#">Nghệ thuật tặng quà</a></p>
+            <p><a href="#">Tải ứng dụng của chúng tôi</a></p>
+        </div>
+
+        <div class="footer-column">
+            <h4>VỀ LOUIS VUITTON</h4>
+            <p><a href="#">Buổi trình diễn thời trang</a></p>
+            <p><a href="#">Nghệ thuật & Văn hóa</a></p>
+            <p><a href="#">La Maison</a></p>
+            <p><a href="#">Phát triển bền vững</a></p>
+            <p><a href="#">Tin mới nhất</a></p>
+            <p><a href="#">Nghề nghiệp</a></p>
+            <p><a href="#">Foundation Louis Vuitton</a></p>
+        </div>
+
+        <div class="footer-column">
+            <h4>KẾT NỐI VỚI CHÚNG TÔI</h4>
+            <p>
+                Đăng ký nhận thư điện tử để cập nhật<br>
+                những tin tức mới nhất từ Louis Vuitton,<br>
+                bao gồm các buổi ra mắt độc quyền trực tuyến<br>
+                và bộ sưu tập mới.
+            </p>
+            <p><a href="#">Theo dõi chúng tôi</a></p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-left">
+            <span>🇻🇳 Việt Nam</span>
+        </div>
+        <div class="footer-center">
+            <h3>LOUIS VUITTON</h3>
+        </div>
+        <div class="footer-right">
+            <a href="#">Sơ đồ trang web</a>
+            <a href="#">Pháp lý & Quyền riêng tư</a>
+        </div>
+    </div>
+</footer>
+</html>

@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 99;
+        }
+
+        /* Khung liên hệ */
+        .contact-panel {
+        position: fixed;
+        top: 0;
+        right: -400px;
+        width: 400px;
+        height: 100%;
+        background: #fff;
+        padding: 30px;
+        box-shadow: -4px 0 10px rgba(0, 0, 0, 0.15);
+        z-index: 100;
+        transition: right 0.4s ease;
+        overflow-y: auto;
+        }
+
+        /* Khi mở */
+        .contact-panel.active {
+        right: 0;
+        }
+        .overlay.active {
+        display: block;
+        }
+
+        /* Header trong khung */
+
+        .close-btn {
+        font-size: 26px;
+        cursor: pointer;
+        }
+
+        /* Danh sách liên hệ */
+        .contact-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+        }
+
+        .contact-list li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Khung liên hệ -->
+    <div id="contactPanel" class="contact-panel">
+        <div class="contact-header">
+            <h2>Liên hệ với chúng tôi</h2>
+            <span id="closeContact" class="close-btn">&times;</span>
+        </div>
+
+        <p>Trung tâm Tư vấn Khách hàng của Louis Vuitton rất hân hạnh được hỗ trợ quý khách.</p>
+
+        <ul class="contact-list">
+            <li><i class="fa fa-phone"></i> +84 2838614107</li>
+            <li><i class="fa fa-envelope"></i> Gửi email</li>
+            <li><i class="fa fa-whatsapp"></i> WhatsApp</li>
+            <li><i class="fa fa-apple"></i> Apple Message</li>
+            <li><i class="fa fa-facebook-messenger"></i> Facebook Messenger</li>
+            <li><i class="fa fa-comment"></i> Zalo</li>
+        </ul>
+    </div>
+    <script>
+  const openBtn = document.getElementById("openContact"); // nút bạn đã có
+  const closeBtn = document.getElementById("closeContact");
+  const panel = document.getElementById("contactPanel");
+  const overlay = document.getElementById("overlay");
+
+  openBtn.addEventListener("click", () => {
+    panel.classList.add("active");
+    overlay.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    panel.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+
+  overlay.addEventListener("click", () => {
+    panel.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+    </script>
+</body>
+</html>

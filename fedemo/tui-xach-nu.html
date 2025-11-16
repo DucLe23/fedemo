@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Túi xách nữ</title>
+    <link rel="stylesheet" href="fe.css">
+</head>
+<body>
+    <section class="products">
+
+        <div class="product-grid">
+            <div class="product-item" onclick="openDetailPage('Alma BB', '₫81,000,000', 'images/almabb.png')">
+                <img src="images/almabb.png" alt="Alma BB" />
+                <p>Alma BB</p>
+                <p class="price">₫81,000,000</p>
+
+            </div>
+
+            <div class="product-item" onclick="openDetailPage('Side Trunk MM', '₫119,000,000', 'images/sidetrunk.png')">
+                <img src="images/sidetrunk.png" alt="Side Trunk MM" />
+                <p>Side Trunk MM</p>
+                <p class="price">₫119,000,000</p>
+            </div>
+
+            <div class="product-item" onclick="openDetailPage('Alma Neverfull Inside Out MM', '₫65,000,000', 'images/neverfull.png')">
+                <img src="images/neverfull.png" alt="Neverfull Inside Out MM" />
+                <p>Neverfull Inside Out MM</p>
+                <p class="price">₫65,000,000</p>
+            </div>
+
+            <div class="product-item" onclick="openDetailPage('Nóe BB', '₫72,000,000', 'images/nóe bb.png')">
+                <img src="images/nóe bb.png" alt="Nóe BB" />
+                <p>Nóe BB</p>
+                <p class="price">₫72,000,000</p>
+            </div>
+            <div class="product-item" onclick="openDetailPage('Túi Speedy Bandoulière 20', '₫97,000,000', 'images/speedy.png')">
+                <img src="images/speedy.png" alt="Túi Speedy Bandoulière 20" />
+                <p>Túi Speedy Bandoulière 20</p>
+                <p class="price">₫97,000,000</p>
+            </div>
+
+            <div class="product-item" onclick="openDetailPage('Túi Vanity Chain Pouch', '₫40,000,000', 'images/vanity.png')">
+                <img src="images/vanity.png" alt="Túi Vanity Chain Pouch" />
+                <p>Túi Vanity Chain Pouch</p>
+                <p class="price">₫40,000,000</p>
+            </div>
+
+            <div class="product-item" onclick="openDetailPage('Túi OnTheGo East West', '₫56,000,000', 'images/west.png')">
+                <img src="images/west.png" alt="Túi OnTheGo East West" />
+                <p>Túi OnTheGo East West</p>
+                <p class="price">₫56,000,000</p>
+            </div>
+
+            <div class="product-item" onclick="openDetailPage('Túi LV Bloom', '₫42,000,000', 'images/bloom.png')">
+                <img src="images/bloom.png" alt="Túi LV Bloom" />
+                <p>Túi LV Bloom</p>
+                <p class="price">₫42,000,000</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        function openDetailPage(name, price, image, desc) {
+            localStorage.setItem("productName", name);
+            localStorage.setItem("productPrice", price);
+            localStorage.setItem("productImage", image);
+            localStorage.setItem("productDesc", desc);
+
+            window.location.href = "detail.html";
+        }
+
+        // ✅ Lưu sản phẩm vào localStorage
+        localStorage.setItem("selectedProduct", JSON.stringify(product));
+        }
+        
+    </script>
+</body>
+</html>
